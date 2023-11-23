@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/NhanVienFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.minhlv.quanlynhansutrongcongty.FirstFragment"
+        android:label="Phòng ban"
+        tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/action_FirstFragment_to_NhanVienFragment"
+            app:destination="@id/NhanVienFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/NhanVienFragment"
+        android:name="com.minhlv.quanlynhansutrongcongty.NhanVienFragment"
+        android:label="Danh sách nhân viên"
+        tools:layout="@layout/fragment_nhan_vien_list">
+
+        <action
+            android:id="@+id/action_NhanVienFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_NhanVienFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.minhlv.quanlynhansutrongcongty.SecondFragment"
+        android:label="Nhân viên"
+        tools:layout="@layout/fragment_second">
+        <action
+            android:id="@+id/action_SecondFragment_to_NhanVienFragment"
+            app:destination="@id/NhanVienFragment" />
+    </fragment>
+</navigation>
